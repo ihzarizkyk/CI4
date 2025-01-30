@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Login - CI 4</title>
 </head>
+<style>
+    body{
+        background-color: gray;
+    }
+</style>
 <body>
 
 <div class="container">
@@ -18,7 +23,9 @@
     <div class="card">
         <div class="card-body">
 
-            <form action="#" method="POST">
+            <form action="<?= site_url('http://localhost:8081/auth/postlogin') ?>" method="POST">
+
+            <?= csrf_field() ?>
 
                 <div class="mb-3">
                     <label class="form-label" for="username">
@@ -36,6 +43,7 @@
 
                 <div class="mb-3">
                     <input type="submit" class="btn btn-md btn-primary" value="Login">
+                    <a href="/" class="btn btn-md btn-danger">Back</a>
                 </div>
 
             </form>
