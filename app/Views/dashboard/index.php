@@ -9,7 +9,14 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container px-3 py-3">
+
+    <div class="mb-3">
+        <a href="/auth/logout" class="btn btn-md btn-danger">
+            Logout
+        </a>
+    </div>
+
     <h2>
         DASHBOARD - CI 4 CRUD
     </h2>

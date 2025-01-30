@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\User;
 
 class Login extends BaseController
 {
@@ -32,7 +33,7 @@ class Login extends BaseController
             $username = $request->getPost('username');
             $password = $request->getPost('password');
 
-            $userModel = new User();
+            $userModel = model('App\Models\User');
             $user = $userModel->where('username', $username)->first();
 
             if ($user && password_verify($password, $user['password'])) {

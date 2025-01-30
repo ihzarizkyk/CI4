@@ -9,4 +9,4 @@ $routes->get('/auth/login','Login::index');
 $routes->post('/auth/postlogin','Login::login');
 $routes->get('/auth/logout','Login::logout');
 
-$routes->post('/dashboard','Dashboard::index');
+$routes->get('/dashboard','Dashboard::index');
