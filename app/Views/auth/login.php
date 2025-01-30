@@ -23,7 +23,7 @@
     <div class="card">
         <div class="card-body">
 
-            <form action="<?= site_url('http://localhost:8081/auth/postlogin') ?>" method="POST">
+            <form action="<?= site_url('/auth/postlogin') ?>" method="POST">
 
             <?= csrf_field() ?>
 
