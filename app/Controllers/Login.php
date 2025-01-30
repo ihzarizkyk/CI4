@@ -13,7 +13,7 @@ class Login extends BaseController
         return view("auth/login");
     }
 
-    public function login()
+    public function postLogin()
     {
         $session = session();
         $request = service('request');
